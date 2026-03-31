@@ -1,0 +1,191 @@
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  background-color: var(--bg);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.012) 40px,
+      rgba(255,255,255,0.012) 41px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.012) 40px,
+      rgba(255,255,255,0.012) 41px
+    );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+ 
+.Contador {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 48px 40px 40px;
+  width: 360px;
+  position: relative;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03),
+    0 40px 80px rgba(0,0,0,0.6);
+}
+ 
+/* Corner accents */
+.Contador::before,
+.Contador::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--accent);
+  border-style: solid;
+}
+.Contador::before {
+  top: -1px; left: -1px;
+  border-width: 2px 0 0 2px;
+}
+.Contador::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 2px 2px 0;
+}
+ 
+/* Title */
+.Contador > h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  margin-bottom: 36px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+
+}
+ 
+/* Display */
+.resultado {
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 32px 24px;
+  text-align: center;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.resultado::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, transparent 100%);
+  pointer-events: none;
+}
+ 
+#resultado {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--accent);
+  text-shadow: var(--glow);
+  line-height: 1;
+  letter-spacing: -2px;
+  transition: all 0.15s ease;
+  position: relative;
+}
+ 
+#resultado.bump {
+  transform: scale(1.06);
+  text-shadow: 0 0 40px rgba(0, 255, 136, 0.7);
+}
+ 
+#resultado.negative {
+  color: var(--danger);
+  text-shadow: var(--glow-danger);
+}
+ 
+/* Buttons */
+.grupoBotones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+ 
+.btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 14px 12px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+ 
+.btn:hover::after { opacity: 0.08; }
+.btn:active { transform: scale(0.97); }
+ 
+/* Incrementar */
+.btn.incrementar {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+  grid-column: 1;
+}
+.btn.incrementar:hover {
+  box-shadow: var(--glow);
+}
+ 
+/* Disminuir */
+.btn.disminuir {
+  background: var(--danger-dim);
+  border-color: var(--danger);
+  color: var(--danger);
+  grid-column: 2;
+}
+.btn.disminuir:hover {
+  box-shadow: var(--glow-danger);
+}
+ 
+/* Reiniciar — full width */
+.btn.restablecer {
+  grid-column: 1 / -1;
+  background: var(--neutral-dim);
+  border-color: var(--neutral);
+  color: var(--text-muted);
+}
+.btn.restablecer:hover {
+  border-color: #666;
+  color: var(--text);
+}
+
+.Contador > h2.cambioColor {
+  color: blueviolet;
+}

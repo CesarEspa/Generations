@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fondo general */
+body {
+  background-color: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+/* Tarjeta principal */
+#app {
+  background-color: #16213e;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 520px;
+  width: 100%;
+  color: #eee;
+}
+
+/* Título */
+h1 {
+  font-size: 1.8rem;
+  color: #a29bfe;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: #a29bfe;
+  margin-bottom: 12px;
+}
+
+/* Zona del carrito */
+#carrito {
+  background: #0f3460;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Cada producto del menú */
+.producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #2d3561;
+}
+
+.nombre-producto {
+  flex: 1;
+}
+
+.precio-producto {
+  color: #a29bfe;
+  margin: 0 16px;
+  font-weight: bold;
+}
+
+/* Botón agregar (dentro de cada producto) */
+.producto button {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.producto button:hover {
+  background: #a29bfe;
+}
+
+/* Zona de botones de acción */
+#acciones {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Botón finalizar */
+#btnFinalizar {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Botón limpiar */
+#btnLimpiar {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  color: #fd79a8;
+  border: 2px solid #fd79a8;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Zona de confirmación */
+#confirmacion {
+  margin-top: 20px;
+  padding: 16px;
+  background: #0f3460;
+  border-radius: 10px;
+  border: 2px solid #a29bfe;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #a29bfe;
+}

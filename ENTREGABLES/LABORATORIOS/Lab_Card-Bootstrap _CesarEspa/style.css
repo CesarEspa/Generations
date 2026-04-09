@@ -1,0 +1,14 @@
+body {
+    min-height: 100vh;
+}
+
+.card {
+    transition: transform 0.3s ease, shadow 0.3s ease; /*Esto Hace que el cambio sea suave */
+}
+
+/* Efecto al pasar el mouse */
+.card:hover {
+    transform: scale(1.05); /*Esto Agranda la card un 5% */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important; /*Esto Aumenta la sombra para dar profundidad */
+    z-index: 1; /*Esto Asegura que se vea por encima de otros elementos */
+}

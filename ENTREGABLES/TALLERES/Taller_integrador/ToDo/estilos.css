@@ -22,11 +22,19 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-h1 { text-align: center; margin-bottom: 20px; color: #333; }
+h1 { text-align: center; 
+    margin-bottom: 20px; 
+    color: #333; 
+}
 
-.input-section { display: flex; flex-direction: column; gap: 10px; }
+.input-section { display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
 
-.form-group { display: flex; gap: 8px; }
+.form-group { display: flex; 
+    gap: 8px; 
+}
 
 input, select {
     padding: 12px;
@@ -57,7 +65,10 @@ input, select {
     border-left: 5px solid #cbd5e0;
 }
 
-.urgente { border-left-color: #ff7675; background: #fff5f5; }
+.urgente { 
+    border-left-color: #ff7675; 
+    background: #fff5f5; 
+}
 
 .completada {
     text-decoration: line-through;
@@ -66,7 +77,11 @@ input, select {
     border-left-color: #2ecc71;
 }
 
-.error-text { color: red; font-size: 0.8rem; font-weight: bold; }
+.error-text { 
+    color: red; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+}
 
 .btn-clear {
     width: 100%;

@@ -1,19 +1,15 @@
-// Variables para contar
-var total = 0;
-var hechas = 0;
+let total = 0;
+let hechas = 0;
+let boton = document.getElementById("btnAgregar");
+let input = document.getElementById("tareaInput");
+let lista = document.getElementById("listaTareas");
 
-// Referencias a los elementos
-var boton = document.getElementById("btnAgregar");
-var input = document.getElementById("tareaInput");
-var lista = document.getElementById("listaTareas");
 
-// Evento para agregar
 boton.addEventListener("click", function() {
     var texto = input.value;
 
     if (texto === "") {
         document.getElementById("errorMsg").style.display = "block";
-        console.log("Error: campo vacío"); // Log 1
     } else {
         document.getElementById("errorMsg").style.display = "none";
         crearTarea(texto);
@@ -22,21 +18,19 @@ boton.addEventListener("click", function() {
 });
 
 function crearTarea(textoTarea) {
-    total = total + 1; // Aumentar contador
+    total = total + 1;
     
     var select = document.getElementById("categoriaSelect");
     var categoria = select.value;
 
-    // Si eligió "Otra", sacar el valor del input oculto
     if (categoria === "Otra") {
         categoria = "✨ " + document.getElementById("otraInput").value;
     }
 
-    // Crear el elemento de la lista
     var li = document.createElement("li");
     li.className = "tarea-card";
     
-    // Si es urgente, le ponemos el estilo rojo
+
     if (categoria.includes("Urgente")) {
         li.className = "tarea-card urgente";
     }
@@ -50,7 +44,6 @@ function crearTarea(textoTarea) {
 
     lista.appendChild(li);
     actualizarPantalla();
-    console.log("Tarea añadida: " + textoTarea); // Log 2
 }
 
 function mostrarOtra() {
@@ -75,22 +68,20 @@ function marcarHecha(boton) {
 }
 
 function eliminar(boton) {
-    var confirmacion = confirm("¿Seguro que quieres borrarla?");
-    if (confirmacion === true) {
+
+    var respuesta = confirm("¿Seguro que quieres borrarla?");
+    if (respuesta) {
         var li = boton.parentElement.parentElement;
-        
-        // Si estaba marcada como hecha, restamos al contador de hechas
-        if (li.className.indexOf("completada") !== -1) {
+        // Revisar si está completada
+        if (li.className.includes("completada")) {
             hechas = hechas - 1;
         }
-        
         li.remove();
         total = total - 1;
         actualizarPantalla();
-        console.log("Tarea eliminada"); // Log 3
+
     }
 }
-
 function actualizarPantalla() {
     document.getElementById("totales").innerHTML = total;
     document.getElementById("hechas").innerHTML = hechas;

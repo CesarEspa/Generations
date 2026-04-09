@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM y Eventos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="contenedor">
+    <h1 id="titulo-principal">Clase DOM</h1>
+
+    <section>
+      <h2>Texto del párrafo</h2>
+      <p id="parrafo-intro">Este es un párrafo inicial.</p>
+      <button id="boton-cambiar-parrafo">Cambiar texto del párrafo</button>
+    </section>
+
+    <section>
+      <h2>Imagen</h2>
+      <p>Ejemplo imagen:</p>
+      <img id="imagen-dino" src="miles-morales-en-spider-man-un-nuevo-universo-3490.jpg" alt="Dino" />
+      
+
+      <button id="boton-borde-imagen">Agregar estilo</button>
+    </section>
+
+    <section>
+      <h2>Lista dinámica</h2>
+      <ul id="lista-items">
+        <li>Ítem desde html</li>
+        <li>Ítem desde html</li>
+        <li>Ítem desde html</li>
+      </ul>
+      <button id="boton-agregar-item">Agregar ítem</button>
+      <button id="boton-eliminar-item">Eliminar ítem</button>
+    </section>
+
+    <section>
+      <h2 id="titulo-resaltado">Seleccionar elementos (querySelector)</h2>
+      <p>Podemos seleccionar elementos igual que en CSS:</p>
+      <button id="boton-resaltar-titulo">Resaltar título principal</button>
+    </section>
+
+    <section>
+      <h2>Manejo de clases y valores</h2>
+      <p>Agregar y quitar clases es la forma recomendada de cambiar estilos.</p>
+
+      <input id="input-nombre" type="text" placeholder="Escribe tu nombre" />
+      <button id="boton-mostrar-nombre">Mostrar nombre</button>
+
+      <p id="resultado-nombre"></p>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

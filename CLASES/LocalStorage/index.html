@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Web Storage — Clase en vivo</h1>
+  
+  <div class="grupo">
+    <h2>Guardar y recuperar un nombre</h2>
+    <div class="fila">
+      <input type="text" id="nombreInput" placeholder="Tu nombre...">
+      <button onclick="guardarNombre()">Guardar</button>
+      <button class="secundario" onclick="mostrarNombre()">Mostrar saludo</button>
+    </div>
+    <div class="fila">
+      <button class="secundario" onclick="mostrarCantidad()">Ver cantidad de claves</button>
+      <button class="peligro" onclick="eliminarUno()">Eliminar nombreUsuario</button>
+      <button class="peligro" onclick="eliminarTodos()">Limpiar todo</button>
+    </div>
+    
+    <div id="resultado"></div>
+    <div id="saludo"></div>
+  </div>
+
+
+    <script src="practica2.js"> </script>
+</body>
+</html>

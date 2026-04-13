@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de Lógica 2</title>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+
+    <script>
+        
+        let entrada = prompt("Ingresa la temperatura en Celsius:");
+
+       
+        while (isNaN(entrada) || entrada === "") {
+            alert("Error: Debes ingresar un número válido.");
+            entrada = prompt("Por favor, ingresa la temperatura en Celsius:");
+        }
+
+       
+        let celsius = parseFloat(entrada);
+
+        
+        let kelvin = celsius + 273.15;
+        let fahrenheit = (celsius * 9/5) + 32;
+
+       
+        console.log("Grados Kelvin: " + kelvin);
+        console.log("Grados Fahrenheit: " + fahrenheit);
+
+        
+        document.write("<p>Grados Kelvin: " + kelvin + "</p>");
+        document.write("<p>Grados Fahrenheit: " + fahrenheit + "</p>");
+    </script>
+</body>
+</html>
